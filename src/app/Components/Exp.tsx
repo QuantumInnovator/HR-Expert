@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/image';
+import Image from 'next/image'; // Import Image from next/image
 import { Circle, CheckCircle2 } from 'lucide-react';
 
 export default function HowItWorks() {
@@ -26,16 +26,16 @@ export default function HowItWorks() {
             <header className="bg-blue-600 text-white p-4 rounded-t-lg flex justify-between items-center">
               <div className="flex items-center space-x-2">
                 <div className="w-6 h-6 rounded-full flex items-center justify-center">
-                  <Image src="/circle.png" alt="" width={20} height={20} />
+                  <Image src="/circle.png" alt="Circle" width={20} height={20} />
                   <div className="w-3 h-3 bg-blue-600 rounded-full"></div>
                 </div>
                 <div className="w-16 h-2 bg-blue-400 rounded"></div>
                 <div className="w-8 h-2 bg-blue-400 rounded"></div>
               </div>
               <div className="flex items-center space-x-4">
-                <Image src="/bell.png" alt="" width={27} height={25} />
+                <Image src="/bell.png" alt="Notification Bell" width={27} height={25} />
                 <div>
-                  <Image src="/ahad.png" alt="" width={25} height={25} />
+                  <Image src="/ahad.png" alt="Syed Ahad" width={25} height={25} />
                 </div>
               </div>
             </header>

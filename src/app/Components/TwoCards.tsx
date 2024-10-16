@@ -25,10 +25,12 @@ function TwoCards() {
         >
           {/* Image (Placeholder) */}
           <div className="w-full mb-4 rounded-lg">
-            <img
-              src="wide.png"
+            <Image
+              src="/wide.png" // Ensure the path is correct and the image is in the public folder
               alt="Centralized Employee Data"
               className="w-full h-auto max-w-full object-cover rounded-lg"
+              width={500} // Set an appropriate width
+              height={300} // Set an appropriate height (adjust as needed)
             />
           </div>
 
@@ -58,10 +60,12 @@ function TwoCards() {
         >
           {/* Image (Placeholder) */}
           <div className="w-full mb-4 rounded-lg">
-            <img
-              src="wide2.png"
+            <Image
+              src="/wide2.png" // Ensure the path is correct and the image is in the public folder
               alt="Advanced Analytics and Reporting"
               className="w-full h-auto max-w-full object-cover rounded-lg"
+              width={500} // Set an appropriate width
+              height={300} // Set an appropriate height (adjust as needed)
             />
           </div>
 
@@ -88,3 +92,4 @@ function TwoCards() {
 }
 
 export default TwoCards;
+

@@ -1,5 +1,6 @@
 'use client'
 import React, { useEffect } from 'react';
+import Image from 'next/image';
 import 'aos/dist/aos.css';
 import Aos from 'aos';
 
@@ -14,12 +15,16 @@ function Icons() {
 
   return (
     <div className="w-full flex flex-wrap justify-center mb-14 cursor-pointer">
-    <img
-      src="/frame32.png"
+    <Image
+      src="/frame32.png" // Ensure the path is correct and the image is in the public folder
       alt="Responsive Image"
       className="hidden md:block w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl object-contain"
+      width={500} // Set an appropriate width
+      height={500} // Set an appropriate height (adjust as needed)
+      priority // Optional: Use this for images that should be loaded with higher priority
     />
   </div>
+  
   
   
     // <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 w-full mt-6 text-center">

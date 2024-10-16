@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 import 'aos/dist/aos.css';
 import Aos from 'aos';
+import Image from 'next/image'; // Import Image from next/image
 
 function Company() {
   useEffect(() => {
@@ -15,12 +16,12 @@ function Company() {
   return (
     <div className="flex flex-wrap items-center justify-center gap-4 w-full h-auto mt-4">
       {/* Add AOS attributes to the images for animation */}
-      <img src="dckr.png" alt="Docker" className="w-16 h-auto md:w-20" data-aos="fade-up" />
-      <img src="amp.png" alt="AMP" className="w-16 h-auto md:w-20" data-aos="fade-up" data-aos-delay="100" />
-      <img src="atl.png" alt="Atlassian" className="w-16 h-auto md:w-20" data-aos="fade-up" data-aos-delay="200" />
-      <img src="base.png" alt="Base" className="w-16 h-auto md:w-20" data-aos="fade-up" data-aos-delay="300" />
-      <img src="drp.png" alt="DropBox" className="w-16 h-auto md:w-20" data-aos="fade-up" data-aos-delay="400" />
-      <img src="them.png" alt="Theme" className="w-16 h-auto md:w-20" data-aos="fade-up" data-aos-delay="500" />
+      <Image src="/dckr.png" alt="Docker" width={64} height={64} className="w-16 h-auto md:w-20" data-aos="fade-up" />
+      <Image src="/amp.png" alt="AMP" width={64} height={64} className="w-16 h-auto md:w-20" data-aos="fade-up" data-aos-delay="100" />
+      <Image src="/atl.png" alt="Atlassian" width={64} height={64} className="w-16 h-auto md:w-20" data-aos="fade-up" data-aos-delay="200" />
+      <Image src="/base.png" alt="Base" width={64} height={64} className="w-16 h-auto md:w-20" data-aos="fade-up" data-aos-delay="300" />
+      <Image src="/drp.png" alt="DropBox" width={64} height={64} className="w-16 h-auto md:w-20" data-aos="fade-up" data-aos-delay="400" />
+      <Image src="/them.png" alt="Theme" width={64} height={64} className="w-16 h-auto md:w-20" data-aos="fade-up" data-aos-delay="500" />
     </div>
   );
 }

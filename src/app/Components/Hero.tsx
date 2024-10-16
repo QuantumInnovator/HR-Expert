@@ -50,10 +50,14 @@ function Hero() {
         >
           Get Started
         </a>
-        <img
+        
+        {/* Updated Image Component */}
+        <Image
           className="mt-5 flex flex-wrap" 
-          src="hr.png" 
-          alt="" 
+          src="/hr.png" // Ensure the path is correct
+          alt="HR Image" // Provide a meaningful alt text
+          width={500} // Set the appropriate width
+          height={300} // Set the appropriate height
           data-aos="fade-up" // AOS animation
           data-aos-delay="400" // Delay for sequential animations
         />
