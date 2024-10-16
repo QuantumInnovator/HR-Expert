@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import React, { useEffect } from 'react';
 import 'aos/dist/aos.css';
 import Aos from 'aos';
@@ -41,6 +41,19 @@ function Hero() {
           Streamline recruitment, manage talent, and automate HR processes effortlessly.
         </p>
         
+        {/* Updated Image Component */}
+        <div className="flex justify-center mb-6">
+          <Image
+            className="w-full max-w-lg object-contain" // Ensures the image is responsive
+            src="/hr.png" // Ensure the path is correct
+            alt="HR Image" // Provide a meaningful alt text
+            width={500} // Set the appropriate width
+            height={300} // Set the appropriate height
+            data-aos="fade-up" // AOS animation
+            data-aos-delay="400" // Delay for sequential animations
+          />
+        </div>
+        
         {/* Call to Action Button */}
         <a
           data-aos="fade-up" // AOS animation
@@ -50,18 +63,7 @@ function Hero() {
         >
           Get Started
         </a>
-        
-        {/* Updated Image Component */}
-        <Image
-          className="mt-5 flex flex-wrap" 
-          src="/hr.png" // Ensure the path is correct
-          alt="HR Image" // Provide a meaningful alt text
-          width={500} // Set the appropriate width
-          height={300} // Set the appropriate height
-          data-aos="fade-up" // AOS animation
-          data-aos-delay="400" // Delay for sequential animations
-        />
-        
+
         <p
           className="flex text-xs justify-center mt-8"
           data-aos="fade-up" // AOS animation
@@ -71,7 +73,7 @@ function Hero() {
         </p>
       </div>
     </section>
-  )
+  );
 }
 
 export default Hero;
