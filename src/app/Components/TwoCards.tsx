@@ -15,12 +15,12 @@ function TwoCards() {
   }, []);
 
   return (
-    <div>
+    <div className="bg-gray-100 dark:bg-gray-900 py-8"> {/* Background for both light and dark mode */}
       <div className="flex flex-col lg:flex-row justify-center items-center lg:space-x-6 space-y-6 lg:space-y-0 px-4 lg:px-0">
         
         {/* Card 1: Centralized Employee Data */}
         <div
-          className="bg-white p-6 rounded-lg shadow-md flex flex-col items-start max-w-lg w-full"
+          className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md flex flex-col items-start max-w-lg w-full"
           data-aos="fade-up" // AOS animation
         >
           {/* Image (Placeholder) */}
@@ -37,16 +37,16 @@ function TwoCards() {
           {/* Icon and Title */}
           <div className="flex items-center mb-4">
             <FaUser className="text-blue-500 text-3xl mr-3 mt-7" />
-            <h3 className="text-sm font-semibold text-gray-800 mt-8">Centralized Employee Data</h3>
+            <h3 className="text-sm font-semibold text-gray-800 dark:text-gray-100 mt-8">Centralized Employee Data</h3>
           </div>
 
           {/* Description */}
-          <p className="text-gray-500 text-sm mb-6">
+          <p className="text-gray-500 dark:text-gray-300 text-sm mb-6">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
 
           {/* Learn More Link */}
-          <a href="#" className="text-blue-500 font-medium text-sm flex items-center">
+          <a href="#" className="text-blue-500 dark:text-blue-400 font-medium text-sm flex items-center">
             Learn More
             <span className="ml-2 text-xl">→</span>
           </a>
@@ -54,7 +54,7 @@ function TwoCards() {
 
         {/* Card 2: Advanced Analytics and Reporting */}
         <div
-          className="bg-white p-6 rounded-lg shadow-md flex flex-col items-start max-w-lg w-full"
+          className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md flex flex-col items-start max-w-lg w-full"
           data-aos="fade-up" // AOS animation
           data-aos-delay="100" // Delay for the second card
         >
@@ -72,16 +72,16 @@ function TwoCards() {
           {/* Icon and Title */}
           <div className="flex items-center mb-4">
             <FaChartLine className="text-blue-500 text-3xl mr-3 mt-7" />
-            <h3 className="text-sm mt-8 font-semibold text-gray-800">Advanced Analytics and Reporting</h3>
+            <h3 className="text-sm mt-8 font-semibold text-gray-800 dark:text-gray-100">Advanced Analytics and Reporting</h3>
           </div>
 
           {/* Description */}
-          <p className="text-gray-500 text-sm mb-6">
+          <p className="text-gray-500 dark:text-gray-300 text-sm mb-6">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
 
           {/* Learn More Link */}
-          <a href="#" className="text-blue-500 font-medium text-sm flex items-center">
+          <a href="#" className="text-blue-500 dark:text-blue-400 font-medium text-sm flex items-center">
             Learn More
             <span className="ml-2 text-xl">→</span>
           </a>
@@ -92,4 +92,3 @@ function TwoCards() {
 }
 
 export default TwoCards;
-

@@ -8,9 +8,9 @@ import Aos from "aos";
 const FAQSection = () => {
   useEffect(() => {
     Aos.init({
-      duration: 800, // Animation duration
-      easing: "ease-in-out", // Animation easing
-      once: false, // Animation should happen only once
+      duration: 300, // Minimized animation duration
+      easing: "ease-in-out",
+      once: false,
     });
   }, []);
 
@@ -50,35 +50,35 @@ const FAQSection = () => {
   ];
 
   return (
-    <div className="bg-[#E6F3FF] h-[650px] py-6">
+    <div className="bg-[#E6F3FF] dark:bg-[#1a1a1a] py-6 transition-colors duration-300">
       <div className="max-w-3xl mx-auto">
         {/* Added FAQs box */}
-        <div className="w-[55px] h-[22px] mx-auto mb-8">
+        <div className="w-[55px] h-[22px] mx-auto mb-8 ">
           <h2 className="font-urbanist text-center" id="faq">
             <Image src="/faq.png" alt="" width={200} height={200} />
           </h2>
         </div>
-        <h1 className="text-2xl font-bold text-center mb-8 text-[#0F47A6]">
+        <h1 className="text-2xl font-bold text-center mb-8 text-[#0F47A6] dark:text-white">
           Frequently Asked Questions
         </h1>
         <div className="space-y-4">
           {faqItems.map((item, index) => (
             <div
               key={item.id}
-              className="bg-white rounded-lg shadow-md overflow-hidden"
+              className="bg-white dark:bg-[#333333] rounded-lg shadow-md overflow-hidden"
               onMouseEnter={() => setHoveredAnswer(item.id)}
               onMouseLeave={() => setHoveredAnswer(null)}
               data-aos="fade-up" // AOS animation for the FAQ item
-              data-aos-delay={index * 100} // Stagger the animations
+              data-aos-delay={index * 50} // Stagger the animations
             >
-              <button className="w-full text-left p-4 flex justify-between items-center focus:outline-none">
-                <span className="font-semibold font-urbanist text-[#09134c]">
+              <button
+                className="w-full text-left p-4 flex justify-between items-center focus:outline-none transition duration-150 bg-transparent hover:bg-[#0F47A6] dark:hover:bg-[#0F47A6] hover:text-white dark:hover:text-white"
+              >
+                <span className="font-semibold font-urbanist text-[#09134c] dark:text-white">
                   {item.question}
                 </span>
                 <svg
-                  className={`w-5 h-5 text-gray-500 transform transition-transform duration-200 ${
-                    hoveredAnswer === item.id ? "rotate-180" : ""
-                  }`}
+                  className={`w-5 h-5 text-gray-500 dark:text-gray-300 transform transition-transform duration-150`} // Reduced transition duration
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -92,9 +92,12 @@ const FAQSection = () => {
                 </svg>
               </button>
               <div
-                className={`px-4 pb-4 text-gray-600 ${
-                  hoveredAnswer === item.id ? "block" : "hidden"
+                className={`px-4 pb-4 text-gray-600 dark:text-gray-300 transition-all duration-150 ease-in-out ${
+                  hoveredAnswer === item.id ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
                 }`}
+                style={{
+                  overflow: "hidden", // Ensure overflow is hidden for smooth transition
+                }}
               >
                 {item.answer}
               </div>
@@ -107,4 +110,5 @@ const FAQSection = () => {
 };
 
 export default FAQSection;
+
 
