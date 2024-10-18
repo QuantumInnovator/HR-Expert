@@ -15,7 +15,7 @@ function Cards() {
   }, []);
 
   return (
-    <div className="w-full flex flex-wrap justify-center px-4 py-8">
+    <div className="w-full flex flex-wrap justify-center px-4 py-8" id='Cards'>
       {/* First Card */}
       <div className="w-full sm:w-1/2 md:w-1/3 lg:w-2/5 xl:w-1/4 p-4" data-aos="fade-up">
         <div className="bg-white dark:bg-gray-800 p-4 rounded-md shadow-lg flex flex-col items-start h-full">
@@ -45,16 +45,16 @@ function Cards() {
       {/* Second Card */}
       <div className="w-full sm:w-1/2 md:w-1/3 lg:w-2/5 xl:w-1/4 p-4" data-aos="fade-up" data-aos-delay="100">
         <div className="bg-white dark:bg-gray-800 p-4 rounded-md shadow-lg flex flex-col items-start h-full">
-          <div className="relative w-full h-64"> {/* Container for Image */}
+          <div className="relative w-full h-64">
             <Image 
               className="rounded-t-md" 
               src="/newimg.png" 
               alt="Employee Self Service" 
               layout="fill" 
-              objectFit="cover" // Maintain aspect ratio and cover the entire space
+              objectFit="cover" 
             />
           </div>
-          <div className="mt-4 flex items-center">
+          <div className="mt-4 flex items-center" id='solution'>
             <Image src="/self.png" alt="Self Service Icon" width={24} height={24} className="mr-2" />
             <h3 className="text-sm font-medium text-gray-800 dark:text-gray-100">Employee Self Service</h3>
           </div>

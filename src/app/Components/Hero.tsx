@@ -15,7 +15,10 @@ function Hero() {
   }, []);
 
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center min-h-screen bg-gradient-to-r from-blue-50 to-blue-100 dark:from-gray-900 dark:to-gray-800 transition-all duration-200">
+    <section 
+      className="min-h-screen w-full flex items-center justify-center bg-gradient-to-r from-blue-50 to-blue-100 dark:from-gray-900 dark:to-gray-800 transition-all duration-200" 
+      id='about'
+    >
       <div className="text-center px-4 py-8 max-w-2xl mx-auto">
         {/* Main Heading */}
         <h1

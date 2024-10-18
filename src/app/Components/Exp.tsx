@@ -5,21 +5,7 @@ import { Circle, CheckCircle2 } from 'lucide-react';
 export default function HowItWorks() {
   return (
     <div className="container mx-auto px-4 py-16 max-w-7xl">
-      <div className="text-center mb-12">
-        <h2 className="text-sm font-medium uppercase tracking-wider inline-block pb-1 mb-2">
-          {/* <Image src="/how.png" alt="" width={200} height={200} /> */}
-        </h2>
-        <h1 className="mt-2 text-3xl font-semibold text-blue-500 sm:text-4xl lg:text-5xl dark:text-blue-300">
-          Empower Employees and
-        </h1>
-        <h1 className="text-3xl font-semibold text-blue-900 sm:text-4xl lg:text-5xl dark:text-blue-400">
-          Automate HR Process
-        </h1>
-        <p className="text-gray-600 max-w-2xl mx-auto dark:text-gray-300">
-          Donec tempor risus ut magna egestas, ut placerat ligula aliquet. Morbi fermentum felis in urna suscipit.
-        </p>
-      </div>
-
+  
       <div className="flex flex-col md:flex-row gap-6 mb-12 justify-center items-center">
         {/* Centered Card Container */}
         <div className="bg-blue-50 dark:bg-gray-800 max-w-md mx-auto p-4 rounded-lg shadow-lg">

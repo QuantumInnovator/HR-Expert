@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import Link from 'next/link';
 
 function Navbar() {
   useEffect(() => {
@@ -39,11 +40,11 @@ function Navbar() {
             className="hidden lg:flex space-x-8 mx-auto transition-all duration-300"
             data-aos="fade-up"  // AOS animation applied to the desktop menu
           >
-            <a href="#" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300">Our Platform</a>
-            <a href="#" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300">Pricing</a>
-            <a href="#" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300">Solution</a>
-            <a href="#" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300">Resources</a>
-            <a href="#" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300">About</a>
+            <a href="#platform" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300">Our Platform</a>
+            <a href="#pricing" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300">Pricing</a>
+            <a href="#solution" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300">Solution</a>
+            <a href="#resources" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300">Resources</a>
+            <a href="#about" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300">About</a>
           </div>
 
           {/* Login and Demo Buttons */}
@@ -52,7 +53,7 @@ function Navbar() {
             data-aos="fade-left"  // AOS animation applied to the buttons
           >
             <button className="border rounded-lg px-4 w-fit py-1 bg-slate-200 dark:bg-gray-800 dark:text-gray-200 transition-all duration-300 hover:bg-gray-300 dark:hover:bg-gray-700">Login</button>
-            <button className="px-4 py-1 bg-blue-800 text-white rounded-lg transition-all duration-300 hover:bg-blue-700">Book a Free Demo</button>
+            <button id='book' className="px-4 py-1 bg-blue-800 text-white rounded-lg transition-all duration-300 hover:bg-blue-700">Book a Free Demo</button>
           </div>
 
           {/* Mobile Menu Button - visible on mobile and tablet */}
@@ -73,19 +74,19 @@ function Navbar() {
       {/* Mobile Menu (now properly working with transition) */}
       <div className={`lg:hidden transition-all duration-300 ${isMenuOpen ? 'block' : 'hidden'}`}>
         <div className="dropdown-menu px-4 pt-2 pb-3 space-y-2 font-bold" data-aos="fade-up">
-          <a href="#" className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 bg-slate-200 dark:bg-gray-800 rounded-lg w-full px-4 py-2 transition-all duration-300">
+          <a href="#platform" className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 bg-slate-200 dark:bg-gray-800 rounded-lg w-full px-4 py-2 transition-all duration-300">
             Our Platform
           </a>
-          <a href="#" className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 bg-slate-200 dark:bg-gray-800 rounded-lg w-full px-4 py-2 transition-all duration-300">
+          <a href="#pricing" className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 bg-slate-200 dark:bg-gray-800 rounded-lg w-full px-4 py-2 transition-all duration-300">
             Pricing
           </a>
-          <a href="#" className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 bg-slate-200 dark:bg-gray-800 rounded-lg w-full px-4 py-2 transition-all duration-300">
+          <a href="#solution" className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 bg-slate-200 dark:bg-gray-800 rounded-lg w-full px-4 py-2 transition-all duration-300">
             Solution
           </a>
-          <a href="#" className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 bg-slate-200 dark:bg-gray-800 rounded-lg w-full px-4 py-2 transition-all duration-300">
+          <a href="#resources" className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 bg-slate-200 dark:bg-gray-800 rounded-lg w-full px-4 py-2 transition-all duration-300">
             Resources
           </a>
-          <a href="#" className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 bg-slate-200 dark:bg-gray-800 rounded-lg w-full px-4 py-2 transition-all duration-300">
+          <a href="#about" className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 bg-slate-200 dark:bg-gray-800 rounded-lg w-full px-4 py-2 transition-all duration-300">
             About
           </a>
         </div>

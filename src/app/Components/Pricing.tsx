@@ -1,19 +1,9 @@
 "use client"
 import { Check } from 'lucide-react'
 import React, { useEffect, useState } from 'react';
-import Aos from 'aos';
-import 'aos/dist/aos.css'
-import Image from 'next/image'
+import Image from 'next/image';
 
 export default function PricingPlans() {
-  useEffect(() => {
-    Aos.init({
-      duration: 800, // Animation duration
-      easing: 'ease-in-out', // Animation easing
-      once: true, // Animation should happen only once
-    });
-  }, [])
-
   const [isAnnual, setIsAnnual] = useState(false)
 
   const plans = [
@@ -59,7 +49,7 @@ export default function PricingPlans() {
   ]
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 scroll-smooth " id='pricing' >
       <div className="text-center mb-12">
         <h2 className='mb-6'>
           <center><Image src="/plan.png" alt='' width={100} height={100}/></center>
@@ -76,7 +66,7 @@ export default function PricingPlans() {
           <button
             className={`${
               !isAnnual ? 'bg-blue-600 text-white' : 'text-gray-500'
-            } relative w-32 py-2 text-sm font-medium rounded focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2`}
+            } relative w-32 py-2 text-sm font-medium rounded focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 transition duration-300`} // Added transition
             onClick={() => setIsAnnual(false)}
           >
             Monthly
@@ -84,7 +74,7 @@ export default function PricingPlans() {
           <button
             className={`${
               isAnnual ? 'bg-blue-600 text-white' : 'text-gray-500'
-            } relative w-32 py-2 text-sm font-medium rounded focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2`}
+            } relative w-32 py-2 text-sm font-medium rounded focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 transition duration-300`} // Added transition
             onClick={() => setIsAnnual(true)}
           >
             Annually
@@ -96,9 +86,7 @@ export default function PricingPlans() {
         {plans.map((plan, index) => (
           <div
             key={plan.name}
-            className={`${plan.color} ${plan.textColor} rounded-lg shadow-lg overflow-hidden`}
-            data-aos="fade-up" // AOS animation
-            data-aos-delay={index * 100} // Delay for sequential animations
+            className={`${plan.color} ${plan.textColor} rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105`} // Added transition on hover
           >
             <div className="px-6 py-8">
               <h3 className="text-2xl font-semibold">{plan.name}</h3>
@@ -112,7 +100,7 @@ export default function PricingPlans() {
               <button
                 className={`mt-8 w-full py-3 px-4 rounded-md ${
                   index === 2 ? 'bg-white text-blue-600' : 'bg-blue-600 text-white'
-                } hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2`}
+                }  transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2`} // Added transition
               >
                 {plan.cta}
               </button>

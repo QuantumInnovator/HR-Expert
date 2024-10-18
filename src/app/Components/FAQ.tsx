@@ -14,7 +14,8 @@ const FAQSection = () => {
     });
   }, []);
 
-  const [hoveredAnswer, setHoveredAnswer] = useState<string | null>(null);
+  // State to track the currently opened FAQ item
+  const [openedAnswer, setOpenedAnswer] = useState<string | null>(null);
 
   const faqItems = [
     {
@@ -49,11 +50,16 @@ const FAQSection = () => {
     },
   ];
 
+  // Function to toggle the opened answer
+  const toggleAnswer = (id: string) => {
+    setOpenedAnswer(openedAnswer === id ? null : id);
+  };
+
   return (
-    <div className="bg-[#E6F3FF] dark:bg-[#1a1a1a] py-6 transition-colors duration-300">
+    <div id="faq" className="bg-[#E6F3FF] dark:bg-[#1a1a1a] py-6 scroll-smooth">
       <div className="max-w-3xl mx-auto">
         {/* Added FAQs box */}
-        <div className="w-[55px] h-[22px] mx-auto mb-8 ">
+        <div className="w-[55px] h-[22px] mx-auto mb-8">
           <h2 className="font-urbanist text-center" id="faq">
             <Image src="/faq.png" alt="" width={200} height={200} />
           </h2>
@@ -65,20 +71,17 @@ const FAQSection = () => {
           {faqItems.map((item, index) => (
             <div
               key={item.id}
-              className="bg-white dark:bg-[#333333] rounded-lg shadow-md overflow-hidden"
-              onMouseEnter={() => setHoveredAnswer(item.id)}
-              onMouseLeave={() => setHoveredAnswer(null)}
-              data-aos="fade-up" // AOS animation for the FAQ item
-              data-aos-delay={index * 50} // Stagger the animations
+              className="bg-white dark:bg-[#333333] rounded-lg shadow-md overflow-hidden transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg" // Added hover effects
             >
               <button
-                className="w-full text-left p-4 flex justify-between items-center focus:outline-none transition duration-150 bg-transparent hover:bg-[#0F47A6] dark:hover:bg-[#0F47A6] hover:text-white dark:hover:text-white"
+                className="w-full text-left p-4 flex justify-between items-center focus:outline-none bg-transparent"
+                onClick={() => toggleAnswer(item.id)} // Toggle on click
               >
                 <span className="font-semibold font-urbanist text-[#09134c] dark:text-white">
                   {item.question}
                 </span>
                 <svg
-                  className={`w-5 h-5 text-gray-500 dark:text-gray-300 transform transition-transform duration-150`} // Reduced transition duration
+                  className={`w-5 h-5 text-gray-500 dark:text-gray-300 ${openedAnswer === item.id ? "rotate-180" : ""}`} // Rotate icon based on opened state
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -92,9 +95,7 @@ const FAQSection = () => {
                 </svg>
               </button>
               <div
-                className={`px-4 pb-4 text-gray-600 dark:text-gray-300 transition-all duration-150 ease-in-out ${
-                  hoveredAnswer === item.id ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
-                }`}
+                className={`px-4 pb-4 text-gray-600 dark:text-gray-300 transition-all duration-300 ease-in-out ${openedAnswer === item.id ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"}`}
                 style={{
                   overflow: "hidden", // Ensure overflow is hidden for smooth transition
                 }}

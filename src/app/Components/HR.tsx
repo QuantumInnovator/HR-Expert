@@ -13,7 +13,7 @@ function HR() {
   }, []);
 
   return (
-    <div className="bg-gray-100 dark:bg-gray-900 py-8"> {/* Background for both light and dark mode */}
+    <div className="bg-gray-100 dark:bg-gray-900 py-8 scroll-smooth" id='HR'> {/* Background for both light and dark mode */}
       {/* Button with AOS animation */}
       <button
         data-aos="fade-up" // AOS animation
