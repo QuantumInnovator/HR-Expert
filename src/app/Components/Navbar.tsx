@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from 'react';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
-import Link from 'next/link';
 
 function Navbar() {
   useEffect(() => {

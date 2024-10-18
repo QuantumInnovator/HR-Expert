@@ -56,11 +56,11 @@ const FAQSection = () => {
   };
 
   return (
-    <div id="faq" className="bg-[#E6F3FF] dark:bg-[#1a1a1a] py-6 scroll-smooth">
+    <div  className="bg-[#E6F3FF] dark:bg-[#1a1a1a] py-6 ">
       <div className="max-w-3xl mx-auto">
         {/* Added FAQs box */}
         <div className="w-[55px] h-[22px] mx-auto mb-8">
-          <h2 className="font-urbanist text-center" id="faq">
+          <h2 className="font-urbanist text-center">
             <Image src="/faq.png" alt="" width={200} height={200} />
           </h2>
         </div>
