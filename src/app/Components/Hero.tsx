@@ -27,7 +27,7 @@ function Hero() {
         <h2
           data-aos="fade-up"
           data-aos-delay="100"
-          className=" mt-3 text-3xl sm:text-5xl md:text-6xl font-bold text-blue-900 dark:text-white mb-6"
+          className=" mt-3 text-3xl sm:text-5xl md:text-6xl font-bold text-blue-900 dark:text-blue-900"
         >
           Smart Assistant
         </h2>
