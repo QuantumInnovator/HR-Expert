@@ -21,16 +21,13 @@ function Hero() {
     >
       <div className="text-center px-4 py-8 max-w-2xl mx-auto">
         {/* Main Heading */}
-        <h1
-          data-aos="fade-up"
-          className="text-3xl sm:text-4xl md:text-5xl font-bold text-blue-800 dark:text-gray-200 mb-4"
-        >
-          Revolutionize Your HR Tasks with Our
+        <h1 className="bg-gradient-to-r from-blue-500 to-blue-900 text-transparent bg-clip-text text-3xl sm:text-4xl md:text-5xl font-bold">
+            Revolutionize Your HR Tasks with Our 
         </h1>
         <h2
           data-aos="fade-up"
           data-aos-delay="100"
-          className="text-4xl sm:text-5xl md:text-6xl font-bold text-blue-900 dark:text-white mb-6"
+          className=" mt-3 text-3xl sm:text-5xl md:text-6xl font-bold text-blue-900 dark:text-white mb-6"
         >
           Smart Assistant
         </h2>

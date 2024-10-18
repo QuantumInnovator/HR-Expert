@@ -22,6 +22,9 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      backgroundtext: {
+        'custom-gradient': 'linear-gradient(90deg, rgba(0, 85, 204, 0.1) 1.67%, rgba(51, 178, 196, 0.1) 96.17%)'
+      },
     },
   },
   plugins: [],

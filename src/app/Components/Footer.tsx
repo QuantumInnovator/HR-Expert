@@ -19,13 +19,13 @@ function Footer() {
             <p className="text-gray-600 mb-4">
               Donec tempor risus ut magna egestas, ut placerat ligula aliquet. Morbi fermentum felis in urna suscipit.
             </p>
-            <div className="flex justify-start md:justify-end items-center mt-4">
+            <div className="flex flex-col md:flex-row justify-start md:justify-end items-center mt-4 space-y-4 md:space-y-0 md:space-x-4">
               <input
                 type="email"
                 placeholder="Enter your email address..."
-                className="px-4 py-2 border rounded-l-md focus:outline-none focus:ring focus:border-blue-300"
+                className="px-4 py-2 border rounded-l-md focus:outline-none focus:ring focus:border-blue-300 w-full md:w-auto"
               />
-              <a href='#book'  className="px-4 py-2 bg-orange-500 text-white font-semibold rounded-r-md hover:bg-orange-600">
+              <a href='#book' className="px-4 py-2 bg-orange-500 text-white font-semibold rounded-md hover:bg-orange-600 w-full md:w-auto">
                 Book a Demo
               </a>
             </div>
@@ -34,12 +34,11 @@ function Footer() {
 
         {/* Bottom Section */}
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
-          
           {/* Stay Informed */}
           <div>
             <h3 className="font-semibold text-gray-700">Stay Informed</h3>
             <p className="text-gray-500 mt-2 mb-4">
-            Donec tempor risus ut magna egestas, ut placerat ligula aliquet. Morbi fermentum felis in urna suscipit.
+              Donec tempor risus ut magna egestas, ut placerat ligula aliquet. Morbi fermentum felis in urna suscipit.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-600 hover:text-gray-900">
